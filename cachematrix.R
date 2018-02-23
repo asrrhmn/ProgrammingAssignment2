@@ -1,7 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+##makes use of lexcial scoping to split functions into
+## constructor functions and the execution functions
 
-## Write a short comment describing this function
+
+## makeCacheMatrix is a constructor function that houses
+## 4 function which will get and set matrix and inverse matrix from
+## the next function
 
 makeCacheMatrix <- function(x = matrix()) {
   i <- NULL
@@ -17,6 +20,8 @@ makeCacheMatrix <- function(x = matrix()) {
        setinverse = setinverse,
        getinverse = getinverse)
 }
+
+## this function does the heavt lifting.
 
 cacheSolve <- function(x, ...) {
   i <- x$getinverse()
